@@ -1,0 +1,5 @@
+name: Eksperimen_Produktivitas_Mental
+
+entry_points:
+  main:
+    command: "python modelling.py"
