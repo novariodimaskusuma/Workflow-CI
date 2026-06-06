@@ -5,7 +5,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 
 def main():
-    mlflow.set_tracking_uri("http://127.0.0.1:5000/")
+
     
     # Set nama eksperimen
     mlflow.set_experiment("Eksperimen_Produktivitas_Mental")
