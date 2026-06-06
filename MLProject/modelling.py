@@ -6,10 +6,6 @@ from sklearn.model_selection import train_test_split
 
 def main():
 
-    
-    # Set nama eksperimen
-    mlflow.set_experiment("Eksperimen_Produktivitas_Mental")
-
     mlflow.sklearn.autolog()
 
     # Load dataset hasil preprocessing
