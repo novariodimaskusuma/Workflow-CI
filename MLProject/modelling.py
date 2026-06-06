@@ -5,13 +5,11 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 
 def main():
-    # SYARAT 1: Menggunakan alamat localhost/127.0.0.1
     mlflow.set_tracking_uri("http://127.0.0.1:5000/")
     
     # Set nama eksperimen
     mlflow.set_experiment("Eksperimen_Produktivitas_Mental")
 
-    # SYARAT 2: Menggunakan autolog murni dari MLflow
     mlflow.sklearn.autolog()
 
     # Load dataset hasil preprocessing
@@ -27,7 +25,6 @@ def main():
     with mlflow.start_run(run_name="Random_Forest_Basic"):
         print("Memulai pelatihan model Random Forest Regressor...")
         
-        # SYARAT 3: Melatih model Scikit-Learn tanpa hyperparameter tuning
         model = RandomForestRegressor(random_state=42)
         
         # Autolog akan otomatis merekam proses fit() ini beserta modelnya
