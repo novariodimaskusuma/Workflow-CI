@@ -29,10 +29,7 @@ jobs:
 
             - name: Run model training
               run: |
-                  cd MLProject
-                  
-                  mlflow ui &
+                   cd MLProject
+                   mlflow run .
 
-                  sleep 5
-
-                  python modelling.py
+                 
