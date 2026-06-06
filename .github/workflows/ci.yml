@@ -30,6 +30,6 @@ jobs:
             - name: Run model training
               run: |
                    cd MLProject
-                   mlflow run .
+                   mlflow run . --env-manager=local
 
                  
